@@ -12,8 +12,8 @@ function Home() {
 
     return (
         <div className='w-[90%] mx-auto flex flex-col gap-y-2'>
-            <p className='font-inter text-slate-700 dark:text-slate-100 font-semibold'>Şifrelenmemiş yazı:</p>
-            <textarea className='w-full border resize-none px-4 py-1.5 rounded-lg font-source outline-none focus:border-indigo-500 transition-all dark:text-slate-100 dark:border-slate-600 dark:bg-slate-700' onChange={(e) => {
+            <label htmlFor='encoded' className='font-inter text-slate-700 dark:text-slate-100 font-semibold'>Şifrelenmemiş yazı:</label>
+            <textarea name='encoded' id='encoded' className='w-full border resize-none px-4 py-1.5 rounded-lg font-source outline-none focus:border-indigo-500 transition-all dark:text-slate-100 dark:border-slate-600 dark:bg-slate-700' onChange={(e) => {
                 const encoded = Ruru256.Encode(e.target.value);
                 setData({
                     key: encoded.key,
@@ -21,16 +21,16 @@ function Home() {
                     input: e.target.value
                 })
             }} value={data.input} cols={30} rows={10}></textarea>
-            <p className='font-inter text-slate-700 dark:text-slate-100  font-semibold'>Şifrelenmiş yazı:</p>
-            <textarea className='w-full border resize-none px-4 py-1.5 rounded-lg font-source outline-none focus:border-indigo-500 transition-all dark:text-slate-100 dark:border-slate-600 dark:bg-slate-700' onChange={(e) => {
+            <label htmlFor='decoded' className='font-inter text-slate-700 dark:text-slate-100  font-semibold'>Şifrelenmiş yazı:</label>
+            <textarea name="decoded" id="decoded" className='w-full border resize-none px-4 py-1.5 rounded-lg font-source outline-none focus:border-indigo-500 transition-all dark:text-slate-100 dark:border-slate-600 dark:bg-slate-700' onChange={(e) => {
                 setData({
                     ...data,
                     input: Ruru256.Decode(Ruru256.reverseString(data.key), e.target.value),
                     output: e.target.value
                 })
             }} value={data.output} cols={30} rows={10}></textarea>
-            <p className='font-inter text-slate-700 dark:text-slate-100  font-semibold'>Anahtar:</p>
-            <input type='text' className='w-full border px-4 py-1.5 rounded-lg font-source outline-none focus:border-indigo-500 transition-all dark:text-slate-100 dark:border-slate-600 dark:bg-slate-700' onChange={(e) => {
+            <label htmlFor='key' className='font-inter text-slate-700 dark:text-slate-100  font-semibold'>Anahtar:</label>
+            <input name="key" id="key" type='text' className='w-full border px-4 py-1.5 rounded-lg font-source outline-none focus:border-indigo-500 transition-all dark:text-slate-100 dark:border-slate-600 dark:bg-slate-700' onChange={(e) => {
                 setData({
                     ...data,
                     key: e.target.value

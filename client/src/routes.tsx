@@ -1,4 +1,5 @@
 import About from "pages/About";
+import IKE from "pages/IKE";
 import PrivateRoute from "./components/route/PrivateRoute";
 import HomeLayout from "./layouts/HomeLayout";
 import Home from "./pages/Home";
@@ -13,6 +14,11 @@ const routes = [
                 index: true,
                 name: 'index',
                 element: <Home />
+            },
+            {
+                path: 'ike',
+                name: 'ike',
+                element: <IKE />
             },
             {
                 path: 'about',

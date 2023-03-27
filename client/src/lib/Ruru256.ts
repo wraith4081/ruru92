@@ -1,5 +1,28 @@
 const Charset = new Array(126 - 33).fill(0).map((_, i) => String.fromCharCode(i + 33)).join('');
 
+const InternalKeys = [
+    /* 
+        ASCII 
+        chars with charcode from 33 to 126
+    */
+   new Array(126 - 33).fill(0).map((_, i) => i + 33).map(x => String.fromCharCode(x)).join(''),
+    /*
+        Latin1 Supplement
+        chars with charcode from 161 to 255
+    */
+    new Array(255 - 161).fill(0).map((_, i) => i + 161).map(x => String.fromCharCode(x)).join(''),
+    /*
+        Latin Extended-A
+        chars with charcode from 256 to 383
+    */
+    new Array(383 - 256).fill(0).map((_, i) => i + 256).map(x => String.fromCharCode(x)).join(''),
+    /*
+        Latin Extended-B
+        chars with charcode from 384 to 591
+    */
+    new Array(591 - 384).fill(0).map((_, i) => i + 384).map(x => String.fromCharCode(x)).join('')
+].join('');
+
 const GetCharCode = (char: string | string[]) => {
     // Check if char is a string or an array of strings
     if (typeof char === 'string') {
@@ -106,6 +129,39 @@ const Encode = (str: string) => {
     return { key: GroupKeyString(key), encoded };
 }
 
+const EncodeWithIKE = (str: string) => {
+    // Initialize
+    let key: number[] = []
+    // Split the string into an array of chars
+    const chars = str.split('');
+    // Get the char codes of the chars
+    const codes = GetCharCode(chars) as number[];
+    // Group the keys
+    const encoded = codes.map(x => {
+        const char = x % Charset.length;
+        key.push(x - char);
+        return Charset[char];
+    }).join('');
+    // Return the encoded string and the key
+    return { key: key.map(x => InternalKeys?.[x] || ' ').join(''), encoded };
+};
+
+const ConvertToIKE = (key: string, encoded: string) => {
+    // split key into array
+    const keyArr = key.split('');
+    // split encoded into array
+    const encodedArr = encoded.split('');
+
+    let result = '';
+
+    // Loop through the encoded array
+    for (let i = 0; i < Math.min(encodedArr.length, keyArr.length); i++) {
+        result += keyArr[i] + encodedArr[i];
+    }
+
+    return result;
+}
+
 const Decode = (key: number[], encoded: string) => {
     // Reverse the key
     return encoded.split('')
@@ -116,6 +172,24 @@ const Decode = (key: number[], encoded: string) => {
         ).join('');
 }
 
+const DecodeFromIKE = (encoded: string) => {
+    // Split the encoded string into an array
+    const arr = encoded.split('');
+    
+    // Group array as even and odd
+    const even = arr.filter((_, i) => i % 2 === 0);
+    const odd = arr.filter((_, i) => i % 2 === 1);
+
+    // Get the key from the even array
+    const key = even.map(x => x === ' ' ? 0 : InternalKeys.indexOf(x));
+    const encodedStr = odd.join('');
+
+    // Decode the string
+    return Decode(key, encodedStr);
+
+}
+
+
 
 export default {
     GetCharCode,
@@ -123,5 +197,9 @@ export default {
     Decode,
     GroupKeys,
     GroupKeyString,
-    reverseString
+    reverseString,
+
+    EncodeWithIKE,
+    DecodeFromIKE,
+    ConvertToIKE
 }

@@ -15,13 +15,13 @@ function Footer() {
 
             </div>
             <div className='flex gap-x-4 text-slate-800 dark:text-slate-200'>
-                <Link to={'https://github.com/wraith4081/ruru92'}>
+                <Link aria-label='Github Repo' to={'https://github.com/wraith4081/ruru92'}>
                 <FaGithub size={24} />
                 </Link>
-                <Link to={'https://wraith.com.tr'}>
+                <Link aria-label='Main Page' to={'https://wraith.com.tr'}>
                     <FaGlobe size={24} />
                 </Link>
-                <Link to={'https://discord.com/users/523113284853825546'}>
+                <Link aria-label="Maker's Discord" to={'https://discord.com/users/523113284853825546'}>
                     <FaDiscord size={24} />
                 </Link>
             </div>
