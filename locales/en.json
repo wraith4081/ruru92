@@ -1,38 +1,38 @@
 {
-            tr: "Turkish",
-            en: "English",
+  "tr": "Turkish",
+  "en": "English",
 
-            changelog: "Changelog",
-            about: "About",
+  "changelog": "Changelog",
+  "about": "About",
 
-            decoded_text: "Decoded text",
-            encoded_text: "Encoded text",
-            key: "Key",
+  "decoded_text": "Decoded text",
+  "encoded_text": "Encoded text",
+  "key": "Key",
 
-            main_page: "Main Page",
-            switch_theme: "Switch Theme",
-            language: "Language",
+  "main_page": "Main Page",
+  "switch_theme": "Switch Theme",
+  "language": "Language",
 
-            maker: 'Maker',
+  "maker": 'Maker',
 
-            maked_by: 'This project is made by Wraith.',
-            for_more_info: 'For more info, check the About page',
+  "maked_by": 'This project is made by Wraith.',
+  "for_more_info": 'For more info, check the About page',
 
-            'joyride.back': 'Back',
-            'joyride.close': 'Close',
-            'joyride.last': 'Last',
-            'joyride.next': 'Next',
-            'joyride.open': 'Open Dialog',
-            'joyride.skip': 'Skip',
+  "joyride.back": 'Back',
+  "joyride.close": 'Close',
+  "joyride.last": 'Last',
+  "joyride.next": 'Next',
+  "joyride.open": 'Open Dialog',
+  "joyride.skip": 'Skip',
 
-            'joyride.encoded': 'You can enter the text you want to encrypt here or view the text you have decrypted.',
-            'joyride.decoded': 'You can enter the text you want to decrypt here or view the text you have encrypted.',
-            'joyride.key': 'You can view the key of the text you have encrypted here or enter the key of the text you want to decrypt.',
-            'joyride.ike': 'You can perform the same encryption operation without a key here.',
-            'joyride.changelog': 'You can view the changelog here.',
-            'joyride.language': 'You can change your language here.',
-            'joyride.about': 'You can get information about this application here.',
-            'joyride.theme': 'You can change the theme here.',
+  "joyride.encoded": "You can enter the text you want to encrypt here or view the text you have decrypted.",
+  "joyride.decoded": "You can enter the text you want to decrypt here or view the text you have encrypted.",
+  "joyride.key": "You can view the key of the text you have encrypted here or enter the key of the text you want to decrypt.",
+  "joyride.ike": "You can perform the same encryption operation without a key here.",
+  "joyride.changelog": "You can view the changelog here.",
+  "joyride.language": "You can change your language here.",
+  "joyride.about": "You can get information about this application here.",
+  "joyride.theme":"You can change the theme here.",
 
-            version: 'Version',
-        }
+  "version": "Version"
+}
