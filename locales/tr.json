@@ -1,39 +1,38 @@
 {
-            tr: "Türkçe",
-            en: "İngilizce",
+  "tr": "Türkçe",
+  "en": "İngilizce",
 
-            changelog: "Değişim Kaydı",
-            about: "Hakkında",
+  "changelog": "Değişim Kaydı",
+  "about": "Hakkında",
 
-            decoded_text: "Şifrelenmemiş yazı",
-            encoded_text: "Şifrelenmiş yazı",
-            key: "Anahtar",
+  "decoded_text": "Şifrelenmemiş yazı",
+  "encoded_text": "Şifrelenmiş yazı",
+  "key": "Anahtar",
 
-            main_page: "Ana Sayfa",
-            switch_theme: "Tema Değiştir",
-            language: "Dil",
+  "main_page": "Ana Sayfa",
+  "switch_theme": "Tema Değiştir",
+  "language": "Dil",
 
-            maker: 'Yapan kişi',
+  "maker": "Yapan kişi",
 
-            maked_by: 'Bu proje Wraith tarafından yapılmıştır.',
-            for_more_info: 'Detaylı bilgi için Hakkında sayfasına bakınız',
+  "maked_by": "Bu proje Wraith tarafından yapılmıştır.",
+  "for_more_info": 'Detaylı bilgi için Hakkında sayfasına bakınız",
 
-            'joyride.back': 'Geri',
-            'joyride.close': 'Kapat',
-            'joyride.last': 'Son',
-            'joyride.next': 'Sonraki',
-            'joyride.open': 'Diyaloğu Aç',
-            'joyride.skip': 'Atla',
+  "joyride.back": "Geri",
+  "joyride.close": "Kapat",
+  "joyride.last": "Son",
+  "joyride.next": "Sonraki",
+  "joyride.open": "Diyaloğu Aç",
+  "joyride.skip": "Atla",
 
-            'joyride.encoded': 'Buraya şifrelemek istediğiniz metini girebilir veya şifresini cözdüğünüz metni görüntüleyebilirsiniz.',
-            'joyride.decoded': 'Buraya şifresini cözmek istediğiniz metini girebilir veya şifrelediğiniz metni görüntüleyebilirsiniz.',
-            'joyride.key': 'Buradan şifrelediğiniz metinin anahtarını görebilir veya şifresini cözmek istediğiniz metinin anahtarını girebilirsiniz.',
-            'joyride.ike': 'Buradan aynı şifreleme işlemini, anahtarsız bir şekilde yapabilirsiniz.',
-            'joyride.changelog': 'Buradan değişim kaydını görüntüleyebilirsiniz.',
-            'joyride.language': 'Buradan dilinizi değiştirebilirsiniz.',
-            'joyride.about': 'Buradan bu uygulama hakkında bilgi alabilirsiniz.',
-            'joyride.theme': 'Buradan temayı değiştirebilirsiniz.',
+  "joyride.encoded": "Buraya şifrelemek istediğiniz metini girebilir veya şifresini cözdüğünüz metni görüntüleyebilirsiniz.",
+  "joyride.decoded": "Buraya şifresini cözmek istediğiniz metini girebilir veya şifrelediğiniz metni görüntüleyebilirsiniz.",
+  "joyride.key": "Buradan şifrelediğiniz metinin anahtarını görebilir veya şifresini cözmek istediğiniz metinin anahtarını girebilirsiniz.",
+  "joyride.ike": "Buradan aynı şifreleme işlemini, anahtarsız bir şekilde yapabilirsiniz.",
+  "joyride.changelog": "Buradan değişim kaydını görüntüleyebilirsiniz.",
+  "joyride.language": "Buradan dilinizi değiştirebilirsiniz.",
+  "joyride.about": "Buradan bu uygulama hakkında bilgi alabilirsiniz.",
+  "joyride.theme": "Buradan temayı değiştirebilirsiniz.",
 
-            version: 'Sürüm',
-
-        }
+  "version": "Sürüm"
+}
