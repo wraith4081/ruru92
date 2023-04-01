@@ -6,13 +6,11 @@ const addResourcesToCache = async (resources) => {
 self.addEventListener("install", (event) => {
     // Request to React's assets
     fetch('/asset-manifest.json').then(r => r.json()).then((assets) => {
-        const entrypoints = JSON.parse(assets).entrypoints;
-
         event.waitUntil(
             addResourcesToCache([
                 "/",
                 "/index.html",
-                ...entrypoints,
+                ...(assets.entrypoints || []),
                 "/logo-white.png",
                 "/logo64.png",
                 "/logo192.png",
