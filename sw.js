@@ -3,7 +3,7 @@ const addResourcesToCache = async (resources) => {
     await cache.addAll(resources);
 };
 
-navigator.serviceWorker.addEventListener("install", (event) => {
+self.addEventListener("install", (event) => {
     // Request to React's assets
     fetch('/asset-manifest.json').then(r => r.json()).then((assets) => {
         const entrypoints = JSON.parse(assets).entrypoints;
