@@ -18,12 +18,12 @@
   "maked_by": "This project is made by Wraith.",
   "for_more_info": "For more info, check the About page",
 
-  "joyride.back": 'Back',
-  "joyride.close": 'Close',
-  "joyride.last": 'Last',
-  "joyride.next": 'Next',
-  "joyride.open": 'Open Dialog',
-  "joyride.skip": 'Skip',
+  "joyride.back": "Back",
+  "joyride.close": "Close",
+  "joyride.last": "Last",
+  "joyride.next": "Next",
+  "joyride.open": "Open Dialog",
+  "joyride.skip": "Skip",
 
   "joyride.encoded": "You can enter the text you want to encrypt here or view the text you have decrypted.",
   "joyride.decoded": "You can enter the text you want to decrypt here or view the text you have encrypted.",
