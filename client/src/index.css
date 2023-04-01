@@ -19,7 +19,6 @@
     .font-maven {
         font-family: 'Maven Pro', sans-serif;
     }
-
     ::-webkit-scrollbar {
         @apply w-[10px] rounded-full cursor-pointer z-10;
     }
@@ -35,9 +34,9 @@
         @apply transition-all bg-slate-600 hover:bg-slate-800 rounded-full;
     }
 
-    .hide-scrollbar {
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+    .hide-scrollbar::-webkit-scrollbar {
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
     }
 
     .about-text {
