@@ -13,10 +13,10 @@
   "switch_theme": "Switch Theme",
   "language": "Language",
 
-  "maker": 'Maker',
+  "maker": "Maker",
 
-  "maked_by": 'This project is made by Wraith.',
-  "for_more_info": 'For more info, check the About page',
+  "maked_by": "This project is made by Wraith.",
+  "for_more_info": "For more info, check the About page",
 
   "joyride.back": 'Back',
   "joyride.close": 'Close',
