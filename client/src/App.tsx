@@ -90,7 +90,7 @@ function App() {
 
     const d1 = new Date();  // today
     const d2 = new Date(
-      '2023-04-01T00:00:00.000Z'
+      `${d1.getFullYear()}-04-01T00:00:00.000Z`
     )  // 1st of April
     const isBirthday = d1.getMonth() === d2.getMonth() && d1.getDate() === d2.getDate();
     const isCelebrated = localStorage.getItem('isCelebrated') === 'true';
